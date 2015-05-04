@@ -17,18 +17,18 @@ $( document ).ready(function() {
 ## Options
 You can customize the behavior of the plugin using this options:
 
-### `alertMessagee` (String)
+- `alertMessagee` (String)
 Send a custom alert for every change on the locked elements
-#### Sample
-```
+##### Sample
+```javascript
 $("h1").lock({
     alertMessage: "You can`t change this."
 });
 ```
-### `customHandler(element, updatedHtml, savedHtml)` (Function) 
+- `customHandler(element, updatedHtml, savedHtml)` (Function) 
 Change the behavior of the plugin, insted of replacing every change with the `savedHtml`.
-### Sample
-```
+##### Sample
+```javascript
 $("h1").lock({
     customHandler: function(element, updatedHtml, savedHtml) {
         //Block the change	
