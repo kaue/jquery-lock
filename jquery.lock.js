@@ -38,15 +38,3 @@
         return elements;
     };
 }( jQuery ));
-
-
-
-var campoPreco = $('i.price');
-var precoInicial = $(campoPreco).html();
-
-$(campoPreco).on('DOMSubtreeModified', function() {
-         if($(campoPreco).html() != precoInicial){
-                   console.log('Foi detectada uma mudança no preço do produto, de %s foi alterado para %s', precoInicial, $(campoPreco).html());
-                   $(campoPreco).html(precoInicial);
-         }
-});
