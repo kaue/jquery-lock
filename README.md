@@ -18,7 +18,7 @@ $( document ).ready(function() {
 ## Options
 You can customize the behavior of the plugin using this options:
 
-- `alertMessagee` (String)
+- `alertMessage` (String)
 
 Send a custom alert for every change on the locked elements
 
