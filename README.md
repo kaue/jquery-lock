@@ -18,6 +18,7 @@ $( document ).ready(function() {
 You can customize the behavior of the plugin using this options:
 
 - `alertMessagee` (String)
+
 Send a custom alert for every change on the locked elements
 
 #### Sample
@@ -27,6 +28,7 @@ $("h1").lock({
 });
 ```
 - `customHandler(element, updatedHtml, savedHtml)` (Function) 
+
 Change the behavior of the plugin, insted of replacing every change with the `savedHtml`.
 
 #### Sample
