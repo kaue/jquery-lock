@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Jquery-lock by Cnova</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Jquery-lock</h1>
+        <h2>jQuery Lock Plugin</h2>
+        <a href="https://github.com/Cnova/jquery-lock" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h2>
+<a id="what-is-jquery-lock-plugin" class="anchor" href="#what-is-jquery-lock-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is jQuery Lock Plugin?</h2>
+
+<p>With this jQuery plugin you will be able to prevent some users from changing content in your page, using the Chrome Developer Tools for example.</p>
+
+<p><a href="http://cnova.github.io/jquery-lock/">Demo</a></p>
+
+<h2>
+<a id="basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Usage</h2>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>//code.jquery.com/jquery-2.1.3.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>//cnova.github.io/jquery-lock/release/jquery.lock.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+<span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">$( <span class="pl-c1">document</span> ).ready(<span class="pl-k">function</span>() {</span>
+<span class="pl-s1">    $(<span class="pl-s"><span class="pl-pds">"</span>h1,p<span class="pl-pds">"</span></span>).lock();</span>
+<span class="pl-s1">});</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span>
+&lt;<span class="pl-ent">h1</span>&gt; I am locked =) &lt;/<span class="pl-ent">h1</span>&gt;
+&lt;<span class="pl-ent">p</span>&gt; I am locked too! &lt;/<span class="pl-ent">p</span>&gt;</pre></div>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p>You can customize the behavior of the plugin using this options:</p>
+
+<ul>
+<li>
+<code>alertMessagee</code> (String)</li>
+</ul>
+
+<p>Send a custom alert for every change on the locked elements</p>
+
+<h2>
+<a id="sample" class="anchor" href="#sample" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample</h2>
+
+<div class="highlight highlight-javascript"><pre>$(<span class="pl-s"><span class="pl-pds">"</span>h1,p<span class="pl-pds">"</span></span>).lock({
+    alertMessage<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>You can`t change this.<span class="pl-pds">"</span></span>
+});</pre></div>
+
+<ul>
+<li>
+<code>customHandler(element, updatedHtml, savedHtml)</code> (Function) </li>
+</ul>
+
+<p>Change the behavior of the plugin, insted of replacing every change with the <code>savedHtml</code>.</p>
+
+<h2>
+<a id="sample-1" class="anchor" href="#sample-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample</h2>
+
+<div class="highlight highlight-javascript"><pre>$(<span class="pl-s"><span class="pl-pds">"</span>h1,p<span class="pl-pds">"</span></span>).lock({
+    <span class="pl-en">customHandler</span>: <span class="pl-k">function</span>(<span class="pl-smi">element</span>, <span class="pl-smi">updatedHtml</span>, <span class="pl-smi">savedHtml</span>) {
+        <span class="pl-c">//Block the change  </span>
+        $(element).html(savedHtml);
+        <span class="pl-c">//Do something else if the updatedHtml</span>
+        <span class="pl-en">console</span><span class="pl-c1">.log</span>(<span class="pl-s"><span class="pl-pds">'</span>Change blocked %s<span class="pl-pds">'</span></span>, updatedHtml);
+    }
+});</pre></div>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Cnova/jquery-lock/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Cnova/jquery-lock/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Cnova/jquery-lock"></a> is maintained by <a href="https://github.com/Cnova">Cnova</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
