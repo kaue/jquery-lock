@@ -38,7 +38,7 @@ $("h1,p").lock({
     customHandler: function(element, updatedHtml, savedHtml) {
         //Block the change	
         $(element).html(savedHtml);
-        //Do something else if the updatedHtml
+        //Do something else with the updatedHtml
         console.log('Change blocked %s', updatedHtml);
     }
 });
