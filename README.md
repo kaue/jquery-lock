@@ -1,7 +1,7 @@
 # jQuery Lock Plugin
 With this jQuery plugin you will be able to prevent some users from changing content in your page, using the Chrome Developer Tools for example.
 
-[Demo](http://cnova.github.io/jquery-lock/)
+[Demo](http://kauegimenes.github.io/jquery-lock/)
 ## Basic Usage
 ```html
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
