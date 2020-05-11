@@ -5,7 +5,7 @@ With this jQuery plugin you will be able to prevent some users from changing con
 ## Basic Usage
 ```html
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-<script src="//cnova.github.io/jquery-lock/release/jquery.lock.min.js"></script>
+<script src="//kauegimenes.github.io/jquery-lock/release/jquery.lock.min.js"></script>
 <script>
 $( document ).ready(function() {
 	$("h1,p").lock();
